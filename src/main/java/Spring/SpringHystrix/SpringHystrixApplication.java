@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 /*
-Importabt Note: Only use the following dependencies for Hystrix:
+Important Note: Only use the following dependencies for Hystrix:
 org.springframework.cloud.netflix.hystrix - @EnableHystrix
 com.netflix.hystrix.contrib.javanica - Hystrix Annotations
 */
@@ -21,7 +21,7 @@ public class SpringHystrixApplication {
     
     @HystrixCommand(fallbackMethod = "fallbackMethod")
     public static void normalMethod() {
-        System.out.println("Normal");
+//        System.out.println("Normal");
     }
     
     public static void fallbackMethod() {
